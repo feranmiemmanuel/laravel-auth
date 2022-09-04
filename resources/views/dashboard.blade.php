@@ -42,8 +42,8 @@
                     <div class="card-body">
                         <div class="d-flex justify-content-between">
                             <div>
-                                <p class="fw-medium text-muted mb-0">Users</p>
-                                <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="{{count($users)}}">0</span></h2>
+                                <p class="fw-medium text-muted mb-0">Wishes</p>
+                                <h2 class="mt-4 ff-secondary fw-semibold"><span class="counter-value" data-target="{{count($wishes)}}">0</span></h2>
                                 <p class="mb-0 text-muted"><span class="badge bg-light text-danger mb-0"> <i class="ri-arrow-down-line align-middle"></i> 3.96 % </span> vs. previous month</p>
                             </div>
                             <div>
@@ -64,7 +64,7 @@
             <div class="col-xl-12">
                 <div class="card">
                     <div class="card-header align-items-center d-flex">
-                        <h4 class="card-title mb-0 flex-grow-1">Users</h4>
+                        <h4 class="card-title mb-0 flex-grow-1">Wishes</h4>
                     </div><!-- end card header -->
 
                     <div class="card-body">
@@ -75,22 +75,21 @@
                                         <th scope="col">User ID</th>
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
-                                        <th scope="col">User Type</th>
-                                        <th scope="col">Test</th>
+                                        <th scope="col">Wish</th>
                                     </tr>
                                 </thead>
 
                                 <tbody>
-                                    @forelse($users as $user)
+                                    @forelse($wishes as $wish)
                                     <tr>
-                                        <td>{{$user->id}}</td>
-                                        <td>{{$user->name}}</td>
-                                        <td>{{$user->email}}</td>
-                                        <td><span class="badge badge-soft-success p-2">{{$user->user_type}}</span></td>
-                                        <td>
+                                        <td>{{$wish->id}}</td>
+                                        <td>{{$wish->name}}</td>
+                                        <td>{{$wish->email}}</td>
+                                        <td>{{$wish->wish}}</td>
+                                        {{-- <td>
                                             <div class="text-nowrap">Test</div>
                                         </td>
-                                    </tr>
+                                    </tr> --}}
                                     @empty
                                     <h1>No Users Yet</h1>
                                     @endforelse

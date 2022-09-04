@@ -1483,13 +1483,13 @@
     <script src="{{asset('js/pages/dashboard-ecommerce.init.js')}}"></script>
 
 
-    <script src="{{asset('libs/fullcalendar/main.min.js')}}"></script>
+    {{-- <script src="{{asset('libs/fullcalendar/main.min.js')}}"></script> --}}
 
     <!-- Calendar init -->
-    <script src="{{asset('js/pages/calendar.init.js')}}"></script> 
+    {{-- <script src="{{asset('js/pages/calendar.init.js')}}"></script>  --}}
     <!-- App js -->
     <script src="{{asset('js/app.js')}}"></script>
-    <script type='text/javascript'>
+    {{-- <script type='text/javascript'>
     (document.querySelectorAll("[toast-list]") ||
         document.querySelectorAll("[data-choices]") ||
         document.querySelectorAll("[data-provider]")) &&
@@ -1502,7 +1502,7 @@
         document.writeln(
           "<script type='text/javascript' src='{{asset('libs/flatpickr/flatpickr.min.js')}}'></script>"
         ));
-      </script>
+      </script> --}}
 </body>
 
 </html>
