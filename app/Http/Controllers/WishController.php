@@ -14,10 +14,6 @@ class WishController extends Controller
             'email' => $request->email,
             'wish' => $request->wish
         ]);
-        $notification = array(
-            'message' => 'Success!',
-            'alert-type' => 'success'
-        );
-        return redirect('/')->with($notification);
+        return response()->json(['success' => true, 'message' => 'Sucessfull']);
     }
 }
